@@ -2,22 +2,28 @@ body {
   background-color: rgb(0, 133, 42);
   max-width: 1920px;
   max-height: 1080px;
+  margin: 0 ;
+  padding: 0;
 
   font-family: 'Montserrat', sans-serif;
 }
-.Border-Screan-Login{
+
+
+
+/* Screen Login */
+
+
+.Border-Screen-Login{
   /* border: solid 3px black; */
-  width: 370px;
-  height: 750px;
-  margin-left: 36%;
-  margin-top: 100px;
+  width: 360px;
+  height: 760px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.40);
-  
 }
-.Screan-image{
+
+.Screen-image{
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -25,7 +31,9 @@ body {
   height: 300px;
   color: white;
 }
-.Screan-forms-infos{
+
+
+.Screen-forms-infos{
   background-color: white;
   padding: 40px;
   height: 400px;
@@ -36,31 +44,31 @@ body {
   
 }
 
-.Screan-forms-login h2{
+.Screen-forms-login h2{
   margin: 0;
   margin-left: 10px;
   padding: 0;
   
 
 }
-.Screan-forms-login h5{
+.Screen-forms-login h5{
   margin-top: 0;
   padding: 0;
   color: rgba(0,0,0,0.70);
 
 }
 
-.Screan-forms-infos h2{
+.Screen-forms-infos h2{
   font-size: 30px;
 }
 
-.Screan-forms-infos h4{
+.Screen-forms-infos h4{
   margin-bottom: 10px;
   font-size: small;
   color: rgba(0,0,0,0.70);
 }
 
-.Screan-forms-infos input{
+.Screen-forms-infos input{
   background-color: rgb(184, 184, 184);
   border: none;
   border-radius: 10px;
@@ -68,22 +76,267 @@ body {
   width: 200px;
 }
 
-.Screan-forms-infos a{
+.Screen-forms-infos a{
   font-size: 13px;
 }
 
-.Button-screan-login{
+.Button-screen-login{
 
     margin-top: 35px;
     display: flex;
     justify-content: center;
 }
 
-.Button-screan-login button{
+.Button-screen-login button{
   background-color: rgb(0, 133, 42);
   color: white;
   border: none;
   border-radius: 7px;
   width: 70px;
   height: 30px;
+}
+
+
+
+/* Register Screen */
+
+.Border-Screen-RegisterStore{
+  /* border: solid 3px black; */
+  width: 370px;
+  height: 750px;
+  margin-left: 36%;
+  margin-right: 36%;
+  margin-top: 100px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.40);
+  
+}
+
+.Screen-image-register{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  color: white;
+}
+
+.Screen-image-register img{
+  width: 80px;
+}
+
+.Screen-image-register p{
+  font-size: x-large;
+}
+
+
+
+
+
+
+/* STORE - BOX INPUT NAME */
+
+
+.Screen-store-name-box{
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.Screen-store-name {
+  width: 270px;
+  display: flex;
+  color: white;
+}
+
+.Screen-store-name p{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.Screen-store-name img{
+  margin: 10px;
+  padding: 0;
+  width: 30px;
+  height: 28px;
+}
+
+.Screen-store-name-box input{
+  height: 25px;
+  width: 270px;
+}
+
+
+
+/* STORE - BOX INPUT CNPJ */
+
+.Screen-store-cnpj-box {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Screen-store-cnpj-box p{
+  align-items: start;
+  color: white;
+}
+
+.Screen-store-cnpj-box input{
+  height: 25px;
+  width: 270px;
+}
+
+
+/* STORE - BOX INPUT ADDRESS */
+
+.Screen-store-address-box {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Screen-store-address-name {
+  width: 270px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.Screen-store-address-number {
+  width: 220px;
+  margin-right: 10px;
+}
+
+.Screen-store-address-input-number {
+  width: 220px;
+  margin-right: 10px;
+  height: 25px;
+}
+
+.Screen-store-address-number2 {
+  height: 25px;
+  width: 30px;
+}
+
+.Screen-store-address-number2 input{
+  width: 30px;
+}
+
+
+/* STORE - INPUT SIGNATURE */
+
+.Screen-store-signature-box {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Screen-store-signature-box p{
+  align-items: start;
+  color: white;
+}
+
+.Screen-store-signature-box input{
+  width: 270px;
+  height: 25px;
+}
+
+/* STORE - INPUT REGION */
+
+.Screen-store-region-box {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Screen-store-region-box p{
+  align-items: start;
+  color: white;
+}
+
+.Screen-store-region-box input{
+  width: 270px;
+  height: 25px;
+}
+
+/* STORE - BUTTONS */
+
+.Screen-store-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+.Screen-store-button-prev{
+  font-size: 15px;
+  width: 70px;
+  margin-right: 40px;
+}
+
+.Screen-store-button-save{
+  font-size: 15px;
+  width: 70px;
+  margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+/* MENU - SCRREN BUTTONS */
+
+.Border-screen-menu{
+  /* border: solid 3px black; */
+  width: 360px;
+  height: 760px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 46px 0px rgba(0,0,0,0.40);
+  
+}
+
+.Screen-image-menu{
+  height: 200px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: x-large;
+}
+
+.Screen-image-menu img{
+  width: 70px;
+}
+
+
+/* MENU - first buttons */
+.Screen-menu-buttons-one {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  
+}
+
+.Button-menu-select1 { 
+  margin: 10px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  width: 130px;
+  height: 70px;
+  
 }
