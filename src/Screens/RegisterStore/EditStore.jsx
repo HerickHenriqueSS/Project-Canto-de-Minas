@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 export default function RegisterStore() {
   const [nameEmpresa, setNameEmpresa] = useState(null);
   const [numberCnpj, setNumberCnpj] = useState(null);
+  const [idStore, setIdStore] = useState(null);
   const [endereco, setEndereco] = useState(null);
   const [number, setNumber] = useState(null);
   const [region, setRegion] = useState(null);
@@ -60,23 +61,32 @@ export default function RegisterStore() {
 
 
   useEffect(() => {
+  }, [idStore]);
+
+  function onchangeIdStore (ev) {
+    const texto = ev.target.value
+    setIdStore(texto)
+  }
+
+
+  useEffect(() => {
   }, [numberCnpj, nameEmpresa, endereco, number, region]);
 
   function validarInformacoes(){
-    if( numberCnpj == null || nameEmpresa == null || endereco == null || number == null || region == null){
+    if( numberCnpj == null || nameEmpresa == null || endereco == null || number == null || region == null || idStore == null){
       alert('Preeencha todos os campos!')
   
     }
-    if(numberCnpj != null && nameEmpresa != null && endereco != null && number != null && region != null){
+    if(numberCnpj != null && nameEmpresa != null && endereco != null && number != null && region != null && idStore != null){
       postInfos();
     }
       
   }
 
   function postInfos(){
-    const url = `http://localhost:3000/registrarLoja/${numberCnpj}/${nameEmpresa}/${endereco}/${number}/${region}/:managerId`;
+    const url = `http://localhost:3000/attLoja/${numberCnpj}/${nameEmpresa}/${endereco}/${number}/${region}/${idStore}`;
       
-      axios.post(url, {})
+      axios.put(url, {})
         .then(response => {
           console.log('Resposta do servidor:', response.data);
         })
@@ -92,7 +102,7 @@ export default function RegisterStore() {
         <div className='Border-Screen-RegisterStore'>
             <div className='Screen-image-register'>
                 <img className='Image-logo' src="../public/assets/logo-canto-de-minas.png" alt="" />
-                <p><b>Cadastro de Loja</b></p>
+                <p><b>Editar Loja</b></p>
             </div>
         <div>
 
@@ -148,7 +158,7 @@ export default function RegisterStore() {
             <div className='Screen-store-signature-box'>
                 <div className='Screen-store-signature'>
                     <p><b>Responsavel pela Loja </b></p>
-                    <input type="text" placeholder='Responsavel Pela Loja'/>
+                    <input type="text" placeholder='Responsavel Pela Loja' />
                 </div>
             </div>
         </div>
@@ -162,6 +172,17 @@ export default function RegisterStore() {
                 <div className='Screen-store-cnpj' >
                     <p><b>Região da Loja</b></p>
                     <input type="text" placeholder='Região da Loja' value={region} onChange={onchangeRegion} />
+                </div>
+            </div>
+
+        </div>
+
+
+        <div>
+            <div className='Screen-store-cnpj-box'>
+                <div className='Screen-store-cnpj' >
+                    <p><b>ID da Loja</b></p>
+                    <input type="number" placeholder='ID da loja' value={idStore} onChange={onchangeIdStore} />
                 </div>
             </div>
 

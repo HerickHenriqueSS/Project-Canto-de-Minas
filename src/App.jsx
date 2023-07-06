@@ -6,6 +6,10 @@ import Menu from './Screens/Menu/Menu'
 import RegisterUser from './Screens/RegisterRepositor/RegisterUser'
 import RegisterProduct from './Screens/RegisterProduct/RegisterProduct'
 import ExchangeToken from './Screens/ExchangeToken/ExchangeToken'
+import MenuEdit from './Screens/Menu/MenuEdit'
+import EditProduct from './Screens/RegisterProduct/EditProduct'
+import EditStore from './Screens/RegisterStore/EditStore'
+import EditUser from './Screens/RegisterRepositor/EditUser'
 
 function App() {
 
@@ -18,6 +22,10 @@ function App() {
           <Route path='/register/client' element ={<RegisterUser/>}/>
           <Route path='/register/product' element ={<RegisterProduct/>}/>
           <Route path='/token' element ={<ExchangeToken/>}/>
+          <Route path='/edit' element ={<MenuEdit/>}/>
+          <Route path='/edit/product' element ={<EditProduct/>}/>
+          <Route path='/edit/user' element ={<EditUser/>}/>
+          <Route path='/edit/store' element ={<EditStore/>}/>
           <Route path='/menu' element ={<Menu/>}/>
         </Routes>
       </BrowserRouter>

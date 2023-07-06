@@ -12,7 +12,7 @@ export default function ButtonSelectPage() {
                 </button>
                 
                 <button className='Button-menu-select1'>
-                    <Link className='link-to' to={`/`}> <b>Gerar Ficha</b> </Link>
+                    <Link className='link-to' to={`/menu`}> <b>Gerar Relatorio</b> </Link>
                     
                     
                 </button>
@@ -39,7 +39,7 @@ export default function ButtonSelectPage() {
                 </button>
 
                 <button className='Button-menu-select1'>
-                    <Link className='link-to' to={`/`}> <b>Gerenciamento de Cadastro</b> </Link>
+                    <Link className='link-to' to={`/edit`}> <b>Gerenciamento de Cadastro</b> </Link>
                     
                 </button>
             </div>
